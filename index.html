@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <title>cashup</title>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <style>
+        .suse {
+            font-family: "SUSE", sans-serif;
+        }
+    </style>
+
+    <nav class="bg-blue-600 p-4 suse">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-4xl font-bold">
+                <span class="text-green-600">
+                    cash</span>up
+            </a>
+            <button id="menu-btn" class="text-white block md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <div id="menu" class="hidden md:flex space-x-4">
+                <a href="https://github.com/ignaciomercado4" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/ignacio-mercado"
+                    class="text-white hover:bg-blue-700 px-3 py-2 rounded-md">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex items-center justify-center suse">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold text-center">
+                let's cash this up
+            </h1>
+            <div>
+                <label for="intial-currency">
+                    Initial currency:
+                </label>
+                <select name="intial-currency" id="intial-currency">
+                    <option value="">test</option>
+                </select>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="src/main.js"></script>
+</body>
+
+</html>
