@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col bg-gradient-to-b from-white to-green-100">
+<body class="min-h-screen flex flex-col bg-gradient-to-tr from-white to-green-200">
     <nav class="bg-green-500 p-4 suse shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-white text-3xl font-bold">
@@ -30,14 +30,9 @@
                 </svg>
             </button>
             <div id="menu" class="hidden md:flex space-x-4">
-                <a href="https://github.com/ignaciomercado4"
-                    class="text-white hover:bg-green-600 px-3 py-2 rounded-md transition">
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/ignacio-mercado"
-                    class="text-white hover:bg-green-600 px-3 py-2 rounded-md transition">
-                    LinkedIn
-                </a>
+                <h2 class="text-white text-2xl hover:text-green-900 px-3 py-2 rounded-md transition">
+                    convert safely.
+                </h2>
             </div>
         </div>
     </nav>
@@ -45,16 +40,15 @@
     <main class="flex-1 flex items-center justify-center p-6 suse">
         <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
             <h1 class="text-3xl font-bold text-center text-green-800 mb-6">
-                Let's cash this up
+                let's cash this up!
             </h1>
             <div class="space-y-4">
                 <div>
                     <label for="initial-currency" class="block text-green-700 font-medium">
-                        Initial currency:
+                        initial currency:
                     </label>
                     <select name="initial-currency" id="initial-currency"
                         class="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
-
                         <option value="AED">AED</option>
                         <option value="AFN">AFN</option>
                         <option value="ALL">ALL</option>
@@ -222,7 +216,7 @@
 
                 <div>
                     <label for="final-currency" class="block text-green-700 font-medium">
-                        Final currency:
+                        final currency:
                     </label>
                     <select name="final-currency" id="final-currency"
                         class="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
@@ -393,29 +387,51 @@
 
                 <div>
                     <label for="initial-amount" class="block text-green-700 font-medium">
-                        Initial amount
+                        initial amount
                     </label>
                     <input type="number" name="initial-amount" id="initial-amount" placeholder="$"
                         class="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
                 </div>
 
                 <div class="text-center mt-4">
-                    <button id="calculate"
-                        class="bg-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
-                        Calculate
+                    <button id="calculate" onclick="calculateFinalAmount()"
+                        class="bg-green-700 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+                        calculate
                     </button>
                 </div>
 
                 <div>
                     <label for="final-amount" class="block text-green-700 font-medium text-center">
-                        Final amount
+                        final amount
                     </label>
-                    <input type="number" name="final-amount" id="final-amount" placeholder="$" disabled
+                    <input type="text" name="final-amount" id="final-amount" placeholder="$" disabled
                         class="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="bg-green-500 text-white py-4 suse">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left ml-2 mb-4 md:mb-0">
+                <p class="text-sm">© cashup</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://github.com/ignaciomercado4"
+                    class="text-white hover:bg-green-600 px-3 py-2 rounded-md transition" target="_blank">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/ignacio-mercado"
+                    class="text-white hover:bg-green-600 px-3 py-2 rounded-md transition" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="https://exchangerate-api.com"
+                    class="text-white hover:bg-green-600 px-3 py-2 rounded-md transition" target="_blank">
+                    API
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="src/main.js"></script>
 </body>

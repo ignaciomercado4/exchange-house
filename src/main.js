@@ -4,19 +4,34 @@ const $finalCurrency = document.querySelector('#final-currency');
 const $initialAmount = document.querySelector('#initial-amount');
 const $finalAmount = document.querySelector('#final-amount');
 const $calculateButton = document.querySelector('#calculate');
-let finalAmount = 0;
 
-
-$calculateButton.onclick = function () {
+function calculateFinalAmount() {
     if ($initialAmount.value && $initialCurrency.value) {
         fetch(BASE_API_URL + $initialCurrency.value)
             .then(response => response.json())
-            .then(responseJSON => a(responseJSON))
+            .then(responseJSON => convertInitialAmount(responseJSON))
             .catch(error => console.log(error))
-
     }
 }
 
-function a(res) {
-    console.log(res)
+function convertInitialAmount(response) {
+    const CONVERSION_RATE = getMatchingConversionRate(response.conversion_rates);
+
+    const total = $initialAmount.value * CONVERSION_RATE;
+    $finalAmount.value = total.toFixed(4) + " " + $initialCurrency.value;
 }
+
+function getMatchingConversionRate(conversionRateObject) {
+    let matchingConversionRate;
+
+    for (let key in conversionRateObject) {
+        if (key === $finalCurrency.value) {
+            matchingConversionRate = conversionRateObject[key]
+        }
+    }
+
+    return matchingConversionRate;
+}
+
+
+
