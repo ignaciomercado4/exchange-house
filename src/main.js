@@ -18,7 +18,7 @@ function convertInitialAmount(response) {
     const CONVERSION_RATE = getMatchingConversionRate(response.conversion_rates);
 
     const total = $initialAmount.value * CONVERSION_RATE;
-    $finalAmount.value = total.toFixed(4) + " " + $initialCurrency.value;
+    $finalAmount.value = total.toFixed(2) + " " + $finalCurrency.value;
 }
 
 function getMatchingConversionRate(conversionRateObject) {

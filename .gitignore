@@ -1,3 +1,12 @@
+# Cypress 
+cypress/screenshots/
+cypress/videos/
+cypress.config.js
+cypress.config.ts
+cypress.env.json
+cypress/logs/
+cypress/output/
+
 # Dependencias de Node
 node_modules/
 package-lock.json
