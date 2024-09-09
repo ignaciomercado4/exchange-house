@@ -40,5 +40,20 @@ describe('exchange house', () => {
     cy.get('#final-amount').should('have.value', '10000.00 USD');
   });
 
+  it('should convert amounts correctly after another conversion', () => {
+    cy.get('#initial-currency').select('ARS');
+    cy.get('#initial-currency').should('have.value', 'ARS');
+    cy.get('#final-currency').select('ARS');
+    cy.get('#final-currency').should('have.value', 'ARS');
+
+
+    cy.get('#initial-amount').type('3000');
+    cy.get('#initial-amount').should('have.value', '3000');
+
+    cy.get('#calculate').click();
+
+    cy.get('#final-amount').should('have.value', '3000.00 ARS');
+  });
+
 
 })
