@@ -1,3 +1,3 @@
-# Conversor de Divisas
+# Currency conversor
 
-Este proyecto es una página web que permite convertir divisas utilizando la API de [ExchangeRate API](https://www.exchangerate-api.com/). Fue desarrollado con JavaScript, HTML, CSS y Tailwind CSS, y cuenta con tests automatizados utilizando Cypress. Este proyecto forma parte del curso de [r/Argentina Programa](https://argentinaprograma.com).
+This project is a web page that allows currency conversion using the [ExchangeRate API](https://www.exchangerate-api.com/). It was developed with JavaScript, HTML, CSS, and Tailwind CSS, and includes automated tests using Cypress. This project is part of the [r/Argentina Programa](https://argentinaprograma.com) course.
